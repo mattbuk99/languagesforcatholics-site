@@ -310,6 +310,20 @@ a:hover {
     margin-bottom: 0.75rem;
 }
 
+.team-member__photos {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.team-member__photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--color-antique-gold);
+}
+
 /* --- Levels --- */
 .levels {
     margin-top: calc(var(--spacing-unit) * 2);
@@ -502,6 +516,12 @@ a:hover {
     
     .features--center-last .feature:last-child {
         grid-column: 1;
+    }
+
+    /* Team photos - smaller on mobile */
+    .team-member__photo {
+        width: 96px;
+        height: 96px;
     }
 }
 
