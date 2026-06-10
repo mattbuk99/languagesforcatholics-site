@@ -92,6 +92,10 @@ a:hover {
     background-color: var(--color-cream);
 }
 
+.section--white {
+    background-color: var(--color-white);
+}
+
 .section--sage {
     background-color: var(--color-sage-green);
 }
@@ -165,7 +169,7 @@ a:hover {
 }
 
 .hero--image {
-    background-image: linear-gradient(rgba(0, 49, 83, 0.6), rgba(0, 49, 83, 0.7)), url('../images/about.jpg');
+    background-image: linear-gradient(rgba(0, 49, 83, 0.6), rgba(0, 49, 83, 0.7)), url('../images/hero.jpg');
     background-size: cover;
     background-position: center;
     color: var(--color-white);
@@ -284,6 +288,31 @@ a:hover {
     grid-column: 2 / 3;
     text-align: left;
 }
+
+/* --- Beliefs Grid (About Page) --- */
+.beliefs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: calc(var(--spacing-unit) * 2);
+    margin-top: calc(var(--spacing-unit) * 2);
+}
+
+.belief {
+    padding: calc(var(--spacing-unit) * 1.5);
+    background-color: var(--color-white);
+    border-radius: 4px;
+}
+
+.belief h3 {
+    color: var(--color-prussian-blue);
+    margin-bottom: 1rem;
+}
+
+.belief p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
 /* --- Testimonial --- */
 .testimonial {
     max-width: 700px;
@@ -522,6 +551,11 @@ a:hover {
     
     .features--center-last .feature:last-child {
         grid-column: 1;
+    }
+
+    /* Beliefs grid - stack on mobile */
+    .beliefs {
+        grid-template-columns: 1fr;
     }
 
     /* Team photos - smaller on mobile */
