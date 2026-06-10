@@ -16,6 +16,11 @@
             <a href="index.html" class="header__logo">
                 <img src="images/logo.png" alt="Languages for Catholics">
             </a>
+            <button class="header__burger" aria-label="Open menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <nav class="header__nav">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
@@ -27,6 +32,7 @@
             </nav>
         </div>
     </header>
+    <div class="nav-overlay"></div>
 
     <section class="section">
         <div class="container">
@@ -44,7 +50,7 @@
                 <p class="testimonial__quote">"The interactive parts of the lessons have become regular games in our house... We hardly ever say the sign of the Cross in English any more!"</p>
                 <p class="testimonial__attribution">— Mother of Éveil student (age 6)</p>
             </div>
-            <div class="testimonial">
+            <div class="testimonial mb-2">
                 <p class="testimonial__quote">"[My daughter] would like the classes to be longer – that is how much she loves them!"</p>
                 <p class="testimonial__attribution">— Mother of Grammaire student (age 12)</p>
             </div>
@@ -68,6 +74,35 @@
             <p><a href="mailto:info@languagesforcatholics.org">info@languagesforcatholics.org</a></p>
         </div>
     </footer>
+
+    <script>
+    (function() {
+        const burger = document.querySelector('.header__burger');
+        const nav = document.querySelector('.header__nav');
+        const overlay = document.querySelector('.nav-overlay');
+
+        function toggleMenu() {
+            const isOpen = nav.classList.toggle('is-open');
+            burger.classList.toggle('is-open');
+            overlay.classList.toggle('is-visible');
+            burger.setAttribute('aria-expanded', isOpen);
+        }
+
+        function closeMenu() {
+            nav.classList.remove('is-open');
+            burger.classList.remove('is-open');
+            overlay.classList.remove('is-visible');
+            burger.setAttribute('aria-expanded', 'false');
+        }
+
+        burger.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', closeMenu);
+
+        nav.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', closeMenu);
+        });
+    })();
+    </script>
 
 </body>
 </html>
