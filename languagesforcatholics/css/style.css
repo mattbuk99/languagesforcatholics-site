@@ -128,7 +128,6 @@ a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: nowrap;
     gap: 1rem;
 }
 
@@ -136,7 +135,6 @@ a:hover {
     height: 100px;
     width: auto;
     margin-left: -3rem;
-    
 }
 
 .header__nav {
@@ -159,6 +157,38 @@ a:hover {
 
 .header__nav a.active {
     color: var(--color-antique-gold);
+}
+
+/* --- Hamburger Menu Button --- */
+.header__burger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 200;
+}
+
+.header__burger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--color-prussian-blue);
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* Burger animation when open */
+.header__burger.is-open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.header__burger.is-open span:nth-child(2) {
+    opacity: 0;
+}
+
+.header__burger.is-open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
 }
 
 /* --- Hero --- */
@@ -426,12 +456,84 @@ a:hover {
     left: 0;
 }
 
-/* --- Contact Form --- */
+/* --- Forms (shared) --- */
 .contact-form {
-    max-width: 600px;
-    margin: calc(var(--spacing-unit) * 2) auto 0;
+    max-width: 500px;
+    margin: 2rem auto;
 }
 
+.contact-form label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    color: var(--color-soft-black);
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--color-sage-green);
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    background-color: var(--color-white);
+    color: var(--color-soft-black);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+    outline: none;
+    border-color: var(--color-prussian-blue);
+}
+
+.contact-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.contact-form button {
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-prussian-blue);
+    color: var(--color-white);
+    border: 2px solid var(--color-prussian-blue);
+    border-radius: 4px;
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.contact-form button:hover {
+    background-color: var(--color-white);
+    color: var(--color-prussian-blue);
+}
+
+/* Forms inside blue sections */
+.section--blue .contact-form label {
+    color: var(--color-cream);
+}
+
+.section--blue .contact-form button {
+    background-color: var(--color-white);
+    color: var(--color-prussian-blue);
+    border-color: var(--color-white);
+}
+
+.section--blue .contact-form button:hover {
+    background-color: transparent;
+    color: var(--color-white);
+}
+
+/* --- Form Groups (legacy support) --- */
 .form-group {
     margin-bottom: var(--spacing-unit);
 }
@@ -444,7 +546,8 @@ a:hover {
 }
 
 .form-group input,
-.form-group textarea {
+.form-group textarea,
+.form-group select {
     width: 100%;
     padding: 0.75rem;
     font-family: var(--font-body);
@@ -454,7 +557,8 @@ a:hover {
 }
 
 .form-group input:focus,
-.form-group textarea:focus {
+.form-group textarea:focus,
+.form-group select:focus {
     outline: none;
     border-color: var(--color-prussian-blue);
 }
@@ -510,31 +614,66 @@ a:hover {
         font-size: 1.5rem;
     }
     
-    /* Smaller header on mobile */
+    /* --- Mobile Header & Hamburger --- */
     .header {
-        padding: 0.5rem 0;
+        padding: 0.75rem 0;
     }
     
     .header__logo img {
         height: 50px;
+        margin-left: 0;
+    }
+    
+    .header__burger {
+        display: block;
     }
     
     .header__nav {
-        gap: 0.75rem;
-        justify-content: center;
+        position: fixed;
+        top: 0;
+        right: -280px;
+        width: 280px;
+        height: 100vh;
+        background-color: var(--color-white);
+        flex-direction: column;
+        padding: 5rem 2rem 2rem;
+        gap: 0;
+        box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease;
+        z-index: 150;
+    }
+    
+    .header__nav.is-open {
+        right: 0;
     }
     
     .header__nav a {
-        font-size: 0.8rem;
+        font-size: 1rem;
+        padding: 0.75rem 0;
+        border-bottom: 1px solid var(--color-cream);
     }
     
-    .header__inner {
-        flex-direction: column;
-        text-align: center;
-        gap: 0.75rem;
+    .header__nav a:last-child {
+        border-bottom: none;
     }
     
-    /* Hero adjustments */
+    /* Overlay when menu is open */
+    .nav-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 140;
+    }
+    
+    .nav-overlay.is-visible {
+        display: block;
+    }
+    
+    /* --- Mobile Hero --- */
     .hero {
         padding: calc(var(--spacing-unit) * 2.5) 0;
     }
@@ -543,16 +682,32 @@ a:hover {
         padding: calc(var(--spacing-unit) * 3) 0;
     }
     
+    .hero__tagline {
+        font-size: 1rem;
+    }
+    
+    .hero__intro {
+        font-size: 1rem;
+    }
+    
+    /* --- Mobile Sections --- */
     .section {
         padding: calc(var(--spacing-unit) * 2) 0;
     }
     
+    /* --- Mobile Buttons --- */
     .btn-group {
         flex-direction: column;
         align-items: center;
+        gap: 0.75rem;
     }
     
-    /* Features grid - stack on mobile */
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* --- Mobile Grids --- */
     .features {
         grid-template-columns: 1fr;
     }
@@ -561,59 +716,33 @@ a:hover {
         grid-column: 1;
     }
 
-    /* Beliefs grid - stack on mobile */
     .beliefs {
         grid-template-columns: 1fr;
     }
 
-    /* Team photos - smaller on mobile */
+    /* --- Mobile Team --- */
     .team-member__photo {
         width: 96px;
         height: 96px;
     }
-}
-
-.contact-form {
-    max-width: 500px;
-    margin: 2rem auto;
-}
-
-.contact-form label {
-    display: block;
-    margin-top: 1rem;
-    margin-bottom: 0.25rem;
-    font-weight: 600;
-    color: var(--soft-black);
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-family: inherit;
-    font-size: 1rem;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    outline: none;
-    border-color: var(--prussian-blue);
-}
-
-.contact-form button {
-    margin-top: 1.5rem;
-    padding: 0.75rem 1.5rem;
-    background-color: #003153 !important;
-    color: #ffffff !important;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
-
-.contact-form button:hover {
-    background-color: #004a7c !important;
+    
+    /* --- Mobile Testimonials --- */
+    .testimonial {
+        font-size: 1.05rem;
+    }
+    
+    .mb-2 {
+        margin-bottom: calc(var(--spacing-unit) * 1.25);
+    }
+    
+    /* --- Mobile Forms --- */
+    .contact-form {
+        max-width: 100%;
+    }
+    
+    .contact-form button,
+    .section--blue .btn {
+        width: 100%;
+        text-align: center;
+    }
 }
