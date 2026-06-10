@@ -198,6 +198,12 @@ a:hover {
     background-position: center;
 }
 
+.hero--about {
+    background-image: linear-gradient(rgba(0, 49, 83, 0.6), rgba(0, 49, 83, 0.7)), url('../images/about.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
 .hero__tagline {
     font-family: var(--font-heading);
     font-style: italic;
