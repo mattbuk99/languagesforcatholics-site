@@ -232,6 +232,12 @@ a:hover {
  background-position: center;
 }
 
+.hero--spain {
+ background-image: linear-gradient(rgba(0, 49, 83, 0.6), rgba(0, 49, 83, 0.7)), url('../images/spain.jpg');
+ background-size: cover;
+ background-position: center;
+}
+
 .hero--about {
  background-image: linear-gradient(rgba(0, 49, 83, 0.6), rgba(0, 49, 83, 0.7)), url('../images/about.jpg');
  background-size: cover;
