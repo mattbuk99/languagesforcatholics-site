@@ -301,6 +301,7 @@ a:hover {
     padding: calc(var(--spacing-unit) * 1.5);
     background-color: var(--color-white);
     border-radius: 4px;
+    color: var(--color-soft-black);
 }
 
 .belief h3 {
@@ -311,6 +312,7 @@ a:hover {
 .belief p {
     font-size: 0.95rem;
     line-height: 1.6;
+    color: var(--color-soft-black);
 }
 
 /* --- Testimonial --- */
