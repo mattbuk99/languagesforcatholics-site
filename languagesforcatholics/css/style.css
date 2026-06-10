@@ -66,6 +66,10 @@ p {
  margin-bottom: var(--spacing-unit);
 }
 
+strong {
+font-weight: 600;
+}
+
 a {
  color: var(--color-prussian-blue);
  text-decoration: underline;
