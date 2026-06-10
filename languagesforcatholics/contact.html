@@ -7,7 +7,6 @@
     <title>Contact | Languages for Catholics</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/png" href="images/favicon.png">
-    <link rel="icon" type="image/png" href="images/logo-emblem.png">
 </head>
 <body>
 
@@ -32,6 +31,7 @@
             </nav>
         </div>
     </header>
+
     <div class="nav-overlay"></div>
 
     <section class="section">
@@ -43,27 +43,33 @@
 
             <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
                 <!-- Your Web3Forms Access Key -->
-                <input type="hidden" name="access_key" value="64c2a9c8-1f0c-4ab6-bb7d-226bc87f206e">
+                
                 
                 <!-- Optional: Customize the email subject line -->
-                <input type="hidden" name="subject" value="New enquiry from Languages for Catholics website">
+                
                 
                 <!-- Optional: Redirect after submission -->
-                <input type="hidden" name="redirect" value="http://www.languagesforcatholics.org/thank-you.html">
+                
                 
                 <!-- Honeypot spam protection (keep this - it's invisible to users) -->
-                <input type="hidden" name="botcheck" style="display: none;">
+                
 
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name" required>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" required="">
+                </div>
 
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" required>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required="">
+                </div>
 
-                <label for="message">Message</label>
-                <textarea name="message" id="message" rows="5" required></textarea>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" rows="5" required=""></textarea>
+                </div>
 
-                <button type="submit">Send Message</button>
+                <button type="submit" class="btn">Send Message</button>
             </form>
         </div>
     </section>
@@ -77,32 +83,21 @@
     </footer>
 
     <script>
-    (function() {
         const burger = document.querySelector('.header__burger');
         const nav = document.querySelector('.header__nav');
         const overlay = document.querySelector('.nav-overlay');
 
-        function toggleMenu() {
-            const isOpen = nav.classList.toggle('is-open');
-            burger.classList.toggle('is-open');
-            overlay.classList.toggle('is-visible');
-            burger.setAttribute('aria-expanded', isOpen);
-        }
-
-        function closeMenu() {
-            nav.classList.remove('is-open');
-            burger.classList.remove('is-open');
-            overlay.classList.remove('is-visible');
-            burger.setAttribute('aria-expanded', 'false');
-        }
-
-        burger.addEventListener('click', toggleMenu);
-        overlay.addEventListener('click', closeMenu);
-
-        nav.querySelectorAll('a').forEach(function(link) {
-            link.addEventListener('click', closeMenu);
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            overlay.classList.toggle('active');
+            burger.setAttribute('aria-expanded', burger.getAttribute('aria-expanded') === 'false' ? 'true' : 'false');
         });
-    })();
+
+        overlay.addEventListener('click', () => {
+            nav.classList.remove('active');
+            overlay.classList.remove('active');
+            burger.setAttribute('aria-expanded', 'false');
+        });
     </script>
 
 </body>
