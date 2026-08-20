@@ -76,35 +76,6 @@
         </div>
     </footer>
 
-    <script>
-    (function() {
-        const burger = document.querySelector('.header__burger');
-        const nav = document.querySelector('.header__nav');
-        const overlay = document.querySelector('.nav-overlay');
-
-        function toggleMenu() {
-            const isOpen = nav.classList.toggle('is-open');
-            burger.classList.toggle('is-open');
-            overlay.classList.toggle('is-visible');
-            burger.setAttribute('aria-expanded', isOpen);
-        }
-
-        function closeMenu() {
-            nav.classList.remove('is-open');
-            burger.classList.remove('is-open');
-            overlay.classList.remove('is-visible');
-            burger.setAttribute('aria-expanded', 'false');
-        }
-
-        burger.addEventListener('click', toggleMenu);
-        overlay.addEventListener('click', closeMenu);
-
-        nav.querySelectorAll('a').forEach(function(link) {
-            link.addEventListener('click', closeMenu);
-        });
-    })();
-    </script>
-
     <script src="js/menu.js"></script>
 
 </body>

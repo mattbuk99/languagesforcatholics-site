@@ -41,7 +41,7 @@
             <div class="hero__intro">
                 <p>We teach French, Italian, and Spanish to Catholic children through live online classes rooted in the faith and culture of the language.</p>
                 <p>Our tutors are devout Catholics and native or near-native speakers. Our curriculum draws on the saints, the liturgy, and the rich heritage of Catholic Europe. Children learn vocabulary and grammar, but more than that, they encounter the living cultures that shaped Christendom.</p>
-                <p>We offer small-group classes via Zoom for ages 3 to 18, from first words to formal grammar. Families across the UK and USA join us each week.</p>
+                <p>We offer small group tuition online for ages 3 to 18, from first words to formal grammar. Families across the UK and USA join us each week.</p>
                 <div class="btn-group">
                     <a href="french.html" class="btn">View our French classes</a>
                     <a href="italian.html" class="btn btn--outline">View our Italian classes</a>
@@ -65,7 +65,7 @@
                     <p>We teach language as a gateway to civilisation. Students go beyond "la gare" and "il ristorante" to meet Sainte Thérèse and Dante.</p>
                 </div>
                 <div class="feature">
-                    <h3>Live, small-group classes</h3>
+                    <h3>Live, small group tuition</h3>
                     <p>Real interaction with a real teacher. Our classes are capped to ensure every child is known, heard, and stretched.</p>
                 </div>
                 <div class="feature">
@@ -105,35 +105,6 @@
             <p><a href="mailto:info@languagesforcatholics.org">info@languagesforcatholics.org</a></p>
         </div>
     </footer>
-
-    <script>
-    (function() {
-        const burger = document.querySelector('.header__burger');
-        const nav = document.querySelector('.header__nav');
-        const overlay = document.querySelector('.nav-overlay');
-
-        function toggleMenu() {
-            const isOpen = nav.classList.toggle('is-open');
-            burger.classList.toggle('is-open');
-            overlay.classList.toggle('is-visible');
-            burger.setAttribute('aria-expanded', isOpen);
-        }
-
-        function closeMenu() {
-            nav.classList.remove('is-open');
-            burger.classList.remove('is-open');
-            overlay.classList.remove('is-visible');
-            burger.setAttribute('aria-expanded', 'false');
-        }
-
-        burger.addEventListener('click', toggleMenu);
-        overlay.addEventListener('click', closeMenu);
-
-        nav.querySelectorAll('a').forEach(function(link) {
-            link.addEventListener('click', closeMenu);
-        });
-    })();
-    </script>
 
     <script src="js/menu.js"></script>
 

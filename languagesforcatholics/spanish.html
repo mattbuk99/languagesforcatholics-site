@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Live online Spanish classes for Catholic children, rooted in faith and Spanish culture.">
+    <meta name="description" content="Live online Spanish classes for Catholic children, rooted in faith and Spanish culture. Booking now for September.">
     <title>Spanish for Catholics | Languages for Catholics</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/png" href="images/favicon.png">
@@ -47,12 +47,12 @@
         <div class="container">
             <h2>Our Levels</h2>
             <div class="levels">
-                <div class="level level--coming-soon">
+                <div class="level level--starting">
                     <h3>Despertar</h3>
                     <p class="level__ages">Ages 3–7</p>
                     <p>A gentle introduction to Spanish through songs, stories, and prayer. Children begin to hear and speak the language of Cervantes, of St Ignatius, of the Church's heart in Spain.</p>
                 </div>
-                <div class="level level--coming-soon">
+                <div class="level level--starting">
                     <h3>Elemental</h3>
                     <p class="level__ages">Ages 7–10</p>
                     <p>Building vocabulary and basic structures through conversation, stories, and cultural content.</p>
@@ -63,7 +63,7 @@
                     <p>Systematic grammar instruction alongside literature, history, and more advanced conversation.</p>
                 </div>
             </div>
-            <p class="mt-2">We are building our Spanish programme thoughtfully. If you're interested in future levels, please get in touch and we'll keep you informed as classes become available.</p>
+            <p class="mt-2"><strong>Despertar and Elemental begin in September and are open for booking now.</strong> Gramática will follow as the programme grows. If that is the level your child needs, do get in touch and we will keep you informed.</p>
         </div>
     </section>
 
@@ -71,7 +71,7 @@
         <div class="container">
             <h2>How It Works</h2>
             <ul>
-                <li>Live classes via Zoom, small groups</li>
+                <li>Live online classes, small group tuition</li>
                 <li>Weekly sessions during UK term time</li>
                 <li>Homework and practice materials provided</li>
                 <li>Regular progress updates for parents</li>
@@ -88,7 +88,7 @@
 
     <section class="section section--blue">
         <div class="container text-center">
-            <h2>Ready to enrol?</h2>
+            <h2>Booking now for September</h2>
             <p>Get in touch to discuss which level is right for your child.</p>
             <div class="btn-group">
                 <a href="contact.html" class="btn" style="background-color: var(--color-white); color: var(--color-prussian-blue); border-color: var(--color-white);">Contact us</a>
@@ -103,35 +103,6 @@
             <p><a href="mailto:info@languagesforcatholics.org">info@languagesforcatholics.org</a></p>
         </div>
     </footer>
-
-    <script>
-    (function() {
-        const burger = document.querySelector('.header__burger');
-        const nav = document.querySelector('.header__nav');
-        const overlay = document.querySelector('.nav-overlay');
-
-        function toggleMenu() {
-            const isOpen = nav.classList.toggle('is-open');
-            burger.classList.toggle('is-open');
-            overlay.classList.toggle('is-visible');
-            burger.setAttribute('aria-expanded', isOpen);
-        }
-
-        function closeMenu() {
-            nav.classList.remove('is-open');
-            burger.classList.remove('is-open');
-            overlay.classList.remove('is-visible');
-            burger.setAttribute('aria-expanded', 'false');
-        }
-
-        burger.addEventListener('click', toggleMenu);
-        overlay.addEventListener('click', closeMenu);
-
-        nav.querySelectorAll('a').forEach(function(link) {
-            link.addEventListener('click', closeMenu);
-        });
-    })();
-    </script>
 
     <script src="js/menu.js"></script>
 

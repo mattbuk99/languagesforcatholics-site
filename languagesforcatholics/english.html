@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="English for Catholics – online English classes for Catholic children in France and Italy. Coming September 2025.">
+    <meta name="description" content="English for Catholics – live online English conversation classes for Catholic children in France and Italy, in small groups with native-speaker Catholic tutors.">
     <title>English for Catholics | Languages for Catholics</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/png" href="images/favicon.png">
@@ -39,39 +39,48 @@
         <div class="container">
             <p class="hero__tagline">Faith. Culture. Excellence.</p>
             <div class="hero__intro">
-                <p>Online English classes for Catholic families in Europe.</p>
+                <p>Live online English conversation classes for Catholic children in France and Italy.</p>
             </div>
         </div>
     </section>
 
     <section class="section section--cream">
         <div class="container">
-            <h2>Coming Soon</h2>
-            <p>We are developing <strong>English for Catholics</strong> – live online English classes for children, rooted in faith and the rich culture of the English-speaking Catholic world.</p>
-            <p>Classes are expected to begin in <strong>September 2026</strong>. Register your interest below and we will be in touch as plans develop.</p>
+            <h2>English Conversation</h2>
+            <p>French and Italian children already learn English at school. What they rarely get is the chance to use it: to speak freely, to be understood, to be corrected kindly, and to discover that the language actually works.</p>
+            <p>That is what these classes are for. <strong>Small group tuition, live and online, with Catholic tutors who are native English speakers.</strong> Children practise the English they are already learning, in conversation about the things that matter to them and to their families.</p>
+            <p>We hope in time to add an Éveil level, introducing English to younger children through songs, stories and prayer. If that would interest your family, please tell us below.</p>
         </div>
     </section>
 
     <section class="section">
         <div class="container">
-            <h2>Prochainement</h2>
-            <p>Nous préparons <strong>English for Catholics</strong> – des cours d'anglais en ligne pour enfants, enracinés dans la foi et la riche culture du monde catholique anglophone.</p>
-            <p>Les cours devraient commencer en <strong>septembre 2026</strong>. Inscrivez-vous ci-dessous pour recevoir des nouvelles dès que les inscriptions seront ouvertes.</p>
+            <h2>Conversation anglaise</h2>
+            <p>Les enfants français apprennent déjà l'anglais à l'école. Ce qui leur manque, c'est l'occasion de le parler : s'exprimer librement, se faire comprendre, être corrigés avec bienveillance.</p>
+            <p>C'est tout le propos de ces cours. <strong>En ligne, en petits groupes, avec des professeurs catholiques anglophones.</strong> Les enfants mettent en pratique l'anglais qu'ils apprennent déjà, dans des conversations qui comptent pour eux et pour leur famille.</p>
+            <p>Nous espérons proposer un jour un niveau Éveil pour les plus jeunes. Si cela vous intéresse, dites-le nous ci-dessous.</p>
         </div>
     </section>
 
     <section class="section section--sage">
         <div class="container">
-            <h2>Prossimamente</h2>
-            <p>Stiamo sviluppando <strong>English for Catholics</strong> – lezioni di inglese online per bambini, radicate nella fede e nella ricca cultura del mondo cattolico anglofono.</p>
-            <p>I corsi inizieranno a <strong>settembre 2026</strong>. Registra il tuo interesse qui sotto e ti contatteremo non appena le iscrizioni saranno aperte.</p>
+            <h2>Conversazione in inglese</h2>
+            <p>I bambini italiani studiano già l'inglese a scuola. Quello che manca è l'occasione di parlarlo davvero: esprimersi liberamente, farsi capire, essere corretti con gentilezza.</p>
+            <p>È proprio questo lo scopo dei nostri corsi. <strong>Online, in piccoli gruppi, con insegnanti cattolici madrelingua.</strong> I bambini mettono in pratica l'inglese che già studiano, conversando di ciò che conta per loro e per la loro famiglia.</p>
+            <p>Speriamo di aggiungere in futuro un livello Éveil per i più piccoli. Se vi interessa, segnalatecelo qui sotto.</p>
         </div>
     </section>
 
     <section class="section section--blue">
         <div class="container">
             <h2>Register Your Interest</h2>
-            <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <!-- REQUIRED: paste your Web3Forms access key between the quotes below -->
+                <input type="hidden" name="access_key" value="PASTE_WEB3FORMS_ACCESS_KEY_HERE">
+                <input type="hidden" name="subject" value="English for Catholics – interest registered">
+                <input type="hidden" name="from_name" value="Languages for Catholics website">
+                <input type="hidden" name="redirect" value="https://languagesforcatholics.org/thank-you.html">
+                <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
                 <div class="form-group">
                     <label for="name">Name / Nom / Nome</label>
                     <input type="text" id="name" name="name" required="">
@@ -93,6 +102,10 @@
                 <div class="form-group">
                     <label for="children">Number of children interested / Nombre d'enfants / Numero di bambini</label>
                     <input type="number" id="children" name="children" min="1" max="10">
+                </div>
+                <div class="form-group">
+                    <label for="ages">Age of children / Âge des enfants / Età dei bambini</label>
+                    <input type="text" id="ages" name="ages" placeholder="e.g. 9 and 12">
                 </div>
                 <div class="form-group">
                     <label for="message">Message (optional / facultatif / facoltativo)</label>

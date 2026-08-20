@@ -78,7 +78,7 @@
         <div class="container">
             <h2>How It Works</h2>
             <ul>
-                <li>Live classes via Zoom, small groups</li>
+                <li>Live online classes, small group tuition</li>
                 <li>Weekly sessions during UK term time</li>
                 <li>Homework and practice materials provided</li>
                 <li>Regular progress updates for parents</li>
@@ -103,35 +103,6 @@
             <p><a href="mailto:info@languagesforcatholics.org">info@languagesforcatholics.org</a></p>
         </div>
     </footer>
-
-    <script>
-    (function() {
-        const burger = document.querySelector('.header__burger');
-        const nav = document.querySelector('.header__nav');
-        const overlay = document.querySelector('.nav-overlay');
-
-        function toggleMenu() {
-            const isOpen = nav.classList.toggle('is-open');
-            burger.classList.toggle('is-open');
-            overlay.classList.toggle('is-visible');
-            burger.setAttribute('aria-expanded', isOpen);
-        }
-
-        function closeMenu() {
-            nav.classList.remove('is-open');
-            burger.classList.remove('is-open');
-            overlay.classList.remove('is-visible');
-            burger.setAttribute('aria-expanded', 'false');
-        }
-
-        burger.addEventListener('click', toggleMenu);
-        overlay.addEventListener('click', closeMenu);
-
-        nav.querySelectorAll('a').forEach(function(link) {
-            link.addEventListener('click', closeMenu);
-        });
-    })();
-    </script>
 
     <script src="js/menu.js"></script>
 
