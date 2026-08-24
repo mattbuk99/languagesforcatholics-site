@@ -551,6 +551,56 @@ a:hover {
  color: var(--color-white);
 }
 
+/* --- Form status messages --- */
+.form-status {
+ margin-top: 1rem;
+ margin-bottom: 0;
+ font-size: 0.95rem;
+ line-height: 1.5;
+}
+
+.form-status--ok {
+ color: var(--color-prussian-blue);
+ font-weight: 600;
+}
+
+.form-status--error {
+ color: #8B2E2E;
+}
+
+.section--blue .form-status--ok {
+ color: var(--color-white);
+ font-weight: 600;
+}
+
+.section--blue .form-status--error,
+.section--blue .form-status--error a {
+ color: var(--color-cream);
+}
+
+/* --- Shown when the form is not connected, or JS is unavailable --- */
+.form-fallback {
+ max-width: 500px;
+ margin: 2rem auto;
+ padding: var(--spacing-unit);
+ border: 1px solid var(--color-sage-green);
+ background-color: var(--color-cream);
+ text-align: center;
+}
+
+.form-fallback p:last-child {
+ margin-bottom: 0;
+}
+
+.section--blue .form-fallback {
+ background-color: transparent;
+ border-color: var(--color-cream);
+}
+
+.section--blue .form-fallback p {
+ color: var(--color-cream);
+}
+
 /* --- Form Groups (legacy support) --- */
 .form-group {
  margin-bottom: var(--spacing-unit);

@@ -40,20 +40,18 @@
             <h1>Contact Us</h1>
             <p>We'd love to hear from you. Whether you have questions about our classes, want to discuss which level suits your child, or simply want to learn more, please get in touch.</p>
             <p><strong>Email:</strong> <a href="mailto:info@languagesforcatholics.org">info@languagesforcatholics.org</a></p>
-            <p>Or use the form below and we'll reply within a few days.</p>
+            <p class="form-intro">Or use the form below and we'll reply within a few days.</p>
 
-            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
-                <!-- Your Web3Forms Access Key -->
-                
-                
-                <!-- Optional: Customize the email subject line -->
-                
-                
-                <!-- Optional: Redirect after submission -->
-                
-                
-                <!-- Honeypot spam protection (keep this - it's invisible to users) -->
-                
+            <form class="contact-form" method="POST" action="https://api.web3forms.com/submit"
+                  data-sending="Sending..."
+                  data-success="Thank you. Your message has arrived safely and we will reply within a few days."
+                  data-error="Sorry, that did not send. Please email us at">
+                <!-- The access key is set in js/form.js. Do not paste it here. -->
+                <input type="hidden" name="access_key" value="">
+                <input type="hidden" name="subject" value="New enquiry from the Languages for Catholics website">
+                <input type="hidden" name="from_name" value="Languages for Catholics website">
+                <!-- Honeypot spam protection (invisible to users, leave it alone) -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display:none;" tabindex="-1" autocomplete="off">
 
                 <div class="form-group">
                     <label for="name">Name</label>
@@ -71,7 +69,19 @@
                 </div>
 
                 <button type="submit" class="btn">Send Message</button>
+                <p class="form-status" role="status" aria-live="polite"></p>
             </form>
+
+            <div class="form-fallback" hidden>
+                <p>Please write to us and we will reply within a few days.</p>
+                <p><a class="btn" href="mailto:info@languagesforcatholics.org">Email us</a></p>
+            </div>
+
+            <noscript>
+                <div class="form-fallback">
+                    <p>Please write to us at <a href="mailto:info@languagesforcatholics.org">info@languagesforcatholics.org</a> and we will reply within a few days.</p>
+                </div>
+            </noscript>
         </div>
     </section>
 
@@ -84,6 +94,7 @@
     </footer>
 
     <script src="js/menu.js"></script>
+    <script src="js/form.js"></script>
 
 </body>
 </html>
