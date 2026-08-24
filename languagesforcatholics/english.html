@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="English for Catholics – live online English classes for Catholic children in France and Italy. Conversation practice for those already learning at school, and Early Years classes for the youngest.">
+    <meta name="description" content="English for Catholics – live online English classes for Catholic children in France, Italy and the Spanish-speaking world. Conversation practice for those already learning at school, and Early Years classes for the youngest.">
     <title>English for Catholics | Languages for Catholics</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/png" href="images/favicon.png">
@@ -39,7 +39,7 @@
         <div class="container">
             <p class="hero__tagline">Faith. Culture. Excellence.</p>
             <div class="hero__intro">
-                <p>Live online English classes for Catholic children in France and Italy.</p>
+                <p>Live online English classes for Catholic children in France, Italy and the Spanish-speaking world.</p>
             </div>
         </div>
     </section>
@@ -47,7 +47,7 @@
     <section class="section section--cream">
         <div class="container">
             <h2>Conversation and Early Years</h2>
-            <p>French and Italian children already learn English at school. What they rarely get is the chance to use it: to speak freely, to be understood, and to be corrected kindly.</p>
+            <p>French, Italian and Spanish-speaking children already learn English at school. What they rarely get is the chance to use it: to speak freely, to be understood, and to be corrected kindly.</p>
             <p>That is the whole point of our classes. <strong>Online, in small groups, with English-speaking Catholic teachers.</strong> Children put into practice the English they are already learning, deepen what they know, and build the confidence to speak fluently and spontaneously about the subjects that matter to them and to their families.</p>
             <p>For the youngest, we also offer lively Early Years classes in small groups, mixing songs, vocabulary, everyday language and grammar, all from a Catholic point of view.</p>
         </div>
@@ -71,12 +71,21 @@
         </div>
     </section>
 
+    <section class="section">
+        <div class="container">
+            <h2>Conversación e iniciación al inglés</h2>
+            <p>Los niños ya estudian inglés en el colegio. Lo que les falta es la ocasión de hablarlo de verdad: expresarse con libertad, hacerse entender y ser corregidos con amabilidad.</p>
+            <p>Ese es precisamente el propósito de nuestras clases. <strong>En línea, en grupos reducidos, con profesores católicos anglófonos.</strong> Los niños ponen en práctica el inglés que ya estudian, profundizan sus conocimientos y desarrollan la capacidad de hablar con fluidez y espontaneidad sobre los temas que les importan a ellos y a sus familias.</p>
+            <p>Para los más pequeños ofrecemos también clases de iniciación muy amenas, en grupos reducidos, que combinan canciones, vocabulario, lenguaje cotidiano y gramática, todo desde una perspectiva católica.</p>
+        </div>
+    </section>
+
     <section class="section section--blue">
         <div class="container">
             <h2>Register Your Interest</h2>
             <form class="contact-form" method="POST" action="https://api.web3forms.com/submit"
-                  data-sending="Sending... / Envoi... / Invio..."
-                  data-success="Thank you, we will be in touch. / Merci, nous vous recontacterons. / Grazie, vi ricontatteremo."
+                  data-sending="Sending... / Envoi... / Invio... / Enviando..."
+                  data-success="Thank you, we will be in touch. / Merci, nous vous recontacterons. / Grazie, vi ricontatteremo. / Gracias, nos pondremos en contacto."
                   data-error="Sorry, that did not send. Please email us at">
                 <!-- The access key is set in js/form.js. Do not paste it here. -->
                 <input type="hidden" name="access_key" value="">
@@ -84,7 +93,7 @@
                 <input type="hidden" name="from_name" value="Languages for Catholics website">
                 <input type="checkbox" name="botcheck" class="hidden" style="display:none;" tabindex="-1" autocomplete="off">
                 <div class="form-group">
-                    <label for="name">Name / Nom / Nome</label>
+                    <label for="name">Name / Nom / Nome / Nombre</label>
                     <input type="text" id="name" name="name" required="">
                 </div>
                 <div class="form-group">
@@ -92,7 +101,7 @@
                     <input type="email" id="email" name="email" required="">
                 </div>
                 <div class="form-group">
-                    <label for="country">Country / Pays / Paese</label>
+                    <label for="country">Country / Pays / Paese / País</label>
                     <select id="country" name="country" required="">
                         <option value="">– Please select –</option>
                         <option value="France">France</option>
@@ -102,26 +111,27 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="children">Number of children interested / Nombre d'enfants / Numero di bambini</label>
+                    <label for="children">Number of children / Nombre d'enfants / Numero di bambini / Número de niños</label>
                     <input type="number" id="children" name="children" min="1" max="10">
                 </div>
                 <div class="form-group">
-                    <label for="ages">Age of children / Âge des enfants / Età dei bambini</label>
+                    <label for="ages">Age of children / Âge des enfants / Età dei bambini / Edad de los niños</label>
                     <input type="text" id="ages" name="ages" placeholder="e.g. 9 and 12">
                 </div>
                 <div class="form-group">
-                    <label for="message">Message (optional / facultatif / facoltativo)</label>
+                    <label for="message">Message (optional / facultatif / facoltativo / opcional)</label>
                     <textarea id="message" name="message" rows="4"></textarea>
                 </div>
                 
-                <button type="submit" class="btn" style="background-color: var(--color-white); color: var(--color-prussian-blue); border-color: var(--color-white);">Register Interest / S'inscrire / Iscriviti</button>
+                <button type="submit" class="btn" style="background-color: var(--color-white); color: var(--color-prussian-blue); border-color: var(--color-white);">Register Interest / S'inscrire / Iscriviti / Inscribirse</button>
                 <p class="form-status" role="status" aria-live="polite"></p>
             </form>
 
             <div class="form-fallback" hidden>
                 <p>Please write to us and we will reply.<br>
                    Écrivez-nous et nous vous répondrons.<br>
-                   Scriveteci e vi risponderemo.</p>
+                   Scriveteci e vi risponderemo.<br>
+                   Escríbanos y le responderemos.</p>
                 <p><a class="btn" href="mailto:info@languagesforcatholics.org" style="background-color: var(--color-white); color: var(--color-prussian-blue); border-color: var(--color-white);">info@languagesforcatholics.org</a></p>
             </div>
 
