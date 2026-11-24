@@ -17,7 +17,7 @@
    silently lost.
    =================================== */
 
-var WEB3FORMS_KEY = "PASTE_WEB3FORMS_ACCESS_KEY_HERE";
+var WEB3FORMS_KEY = "64c2a9c8-1f0c-4ab6-bb7d-226bc87f206e";
 
 var LFC_EMAIL = "info@languagesforcatholics.org";
 
