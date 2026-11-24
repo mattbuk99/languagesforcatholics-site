@@ -10,18 +10,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (!burger || !nav || !overlay) return;
 
+  // The button's labels can be translated in the HTML (see the French pages)
+  const labelOpen = burger.getAttribute('data-label-open') || 'Open menu';
+  const labelClose = burger.getAttribute('data-label-close') || 'Close menu';
+
   function closeMenu() {
     burger.classList.remove('is-open');
     nav.classList.remove('active');
     overlay.classList.remove('active');
     burger.setAttribute('aria-expanded', 'false');
+    burger.setAttribute('aria-label', labelOpen);
   }
 
   function toggleMenu() {
     const isOpen = burger.classList.toggle('is-open');
     nav.classList.toggle('active');
     overlay.classList.toggle('active');
-    burger.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    burger.setAttribute('aria-label', isOpen ? labelClose : labelOpen);
     burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
   }
 
